@@ -1,4 +1,24 @@
 
+# DBT generated folders
 target/
-dbt_packages/
 logs/
+dbt_packages/
+
+# Python virtual environment
+my-dbt-env/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
+
+# DBT profiles (contains credentials)
+# ⚠️ Ne jamais pousser ce fichier sur GitHub
+~/.dbt/profiles.yml
+
