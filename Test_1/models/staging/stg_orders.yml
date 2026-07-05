@@ -4,9 +4,22 @@ models:
   - name: stg_orders
     columns:
       - name: order_id
-      - name: customer_name
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+
       - name: order_timestamp
-      - name: store_id
-      - name: subtotal
-      - name: tax_paid
+        tests:
+          - not_null
+
       - name: order_total
+        tests:
+          - not_null
+
